@@ -1,6 +1,6 @@
 # SeeWav: animation generator for audio waveforms
 
-SeeWav can generate some nice animations for your waveform.
+SeeWav can generate some nice animations for your waveform using Cairo and Ffmpeg.
 For a demo, click on the image:
 
 <p align="center">
@@ -14,6 +14,8 @@ You will need `ffmpeg` installed with codec support for `libx264` and `aac`.
 On Mac OS X with Homebrew, run `brew install ffmpeg`, on Ubuntu `sudo apt-get install ffmpeg`.
 If you are using Anaconda, you can also do `conda install -c conda-forge ffmpeg`.
 
+requirements:
+numpy, pycairo, tqdm
 
 ```bash
 pip3 install seewav
@@ -62,4 +64,10 @@ optional arguments:
   -s SEEK, --seek SEEK  Seek to time in seconds in video.
   -d DURATION, --duration DURATION
                         Duration in seconds from seek time.
+```
+
+## Example
+
+```bash
+seewav -c 1,0,0 sound.wav
 ```
